@@ -19,10 +19,11 @@
     <h1>WebTest</h1>
     <br>
     <i>The easy way to test your browser's JS engine.</i>
+    <br>
     <button onclick="test()">Test my browser!</button>
     <hr>
     <div id="testresults"><i>Test results will show up here...</i></div>
-    <div style="position: absolute; bottom: 5px;"><i>Open-sourced by kaiete on GitHub &middot; This test shouldn't impact browser performance, even while running</i></div>
+    <div style="position: absolute; bottom: 5px; text-align: center; margin: auto;"><i>Open-sourced by kaiete on GitHub &middot; This test shouldn't impact browser performance, even while running</i></div>
     <script>
         const test = function() {
             var success = {vibrate: 1}
@@ -33,11 +34,11 @@
                 success.vibrate = 0
             }
             if (success.vibrate == 1) {
-                results.innerHTML += "Your browser supports vibration!"
+                results.innerHTML = "Your browser supports vibration!"
             } else if (success.vibrate == 1) {
-                results.innerHTML += "Your browser or device doesn't support vibration."
+                results.innerHTML = "Your browser or device doesn't support vibration."
             } else {
-                results.innerHTML += "Hmmm, that's weird. Something went wrong when testing vibration."
+                results.innerHTML = "Hmmm, that's weird. Something went wrong when testing vibration."
             }
         }
     </script>
